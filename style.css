@@ -65,3 +65,21 @@ button:hover {
   font-size: 1.5rem;
   color: #333;
 }
+/* Style for the Upload Image Button */
+#uploadImageContainer {
+  margin-top: 20px;
+}
+
+#uploadBtn {
+  background-color: #FF9800;
+  color: white;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+#uploadBtn:hover {
+  background-color: #fb8c00;
+}

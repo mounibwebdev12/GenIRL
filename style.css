@@ -1,0 +1,67 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Style for the three-dots menu button */
+.menu-button {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Hidden menu options */
+.menu-options {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Show menu when active */
+.menu-options.show {
+  display: flex;
+}
+
+/* Button styles for the menu */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Design Area */
+#designArea {
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#designArea h2 {
+  font-size: 1.5rem;
+  color: #333;
+}

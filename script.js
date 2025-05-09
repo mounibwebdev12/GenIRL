@@ -47,3 +47,34 @@ document.getElementById('imageInput').addEventListener('change', (e) => {
     reader.readAsDataURL(file); // Read the image as a data URL
   }
 });
+// Handle Spawn Button Click
+document.getElementById('spawnBtn').addEventListener('click', () => {
+  // Get the current design from the drop area (this could include the tools or image)
+  const design = document.getElementById('dropArea').innerHTML;
+  
+  // Display the spawned design and the cables
+  const spawnedDesignContainer = document.getElementById('spawnedDesign');
+  const cablesContainer = document.getElementById('cables');
+  
+  // Show the design (you might want to customize this part depending on your design structure)
+  spawnedDesignContainer.innerHTML = `<h3>Design Preview:</h3><div>${design}</div>`;
+  
+  // Add cable options (simulate cables for now)
+  cablesContainer.innerHTML = `
+    <div class="cable" data-cable="1">Cable 1</div>
+    <div class="cable" data-cable="2">Cable 2</div>
+    <div class="cable" data-cable="3">Cable 3</div>
+  `;
+
+  // Show the spawned design section
+  spawnedDesignContainer.style.display = 'block';
+});
+
+// Cable click functionality (choosing which cable to "shoot electricity from")
+document.getElementById('cables').addEventListener('click', (e) => {
+  if (e.target.classList.contains('cable')) {
+    const selectedCable = e.target.getAttribute('data-cable');
+    alert(`You selected Cable ${selectedCable} to shoot electricity!`);
+    // You can replace the alert with the actual functionality to trigger the "electricity boom"
+  }
+});
